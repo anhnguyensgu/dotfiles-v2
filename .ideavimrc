@@ -1,0 +1,19 @@
+set clipboard=unnamedplus
+set relativenumber
+set ideajoin
+
+let mapleader = " "
+map <S-l> <Action>(NextTab)
+map <S-h> <Action>(PreviousTab)
+
+map <Leader>lj <Action>(GotoNextError)
+map <Leader>lk <Action>(GotoPreviousError)
+map <Leader>la <Action>(ShowIntentionActions)
+map <Leader>lr <Action>(RenameElement)
+
+map <Leader>w :w<CR>
+map <Leader>st <Action>(FindInPath)
+map <Leader>sf <Action>(SearchEverywhere)
+map <Leader>sb <Action>(RecentFiles)
+map gI <Action>(GotoImplementation)
+inoremap jk <ESC>
