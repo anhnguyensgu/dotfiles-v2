@@ -20,24 +20,29 @@ local spec = {
       --   floats = "transparent",
       -- }
     },
-    config = function(_, opts)
-      require('tokyonight').setup(opts)
-      vim.cmd('colorscheme tokyonight-moon')
-      -- require("tokyonight").setup {
-      --   transparent = true,
-      --   styles = {
-      --     sidebars = "transparent",
-      --     floats = "transparent",
-      --   }
-      -- }
-    end
+    -- config = function(_, opts)
+    --   require('tokyonight').setup(opts)
+    --   vim.cmd('colorscheme tokyonight-moon')
+    --   -- require("tokyonight").setup {
+    --   --   transparent = true,
+    --   --   styles = {
+    --   --     sidebars = "transparent",
+    --   --     floats = "transparent",
+    --   --   }
+    --   -- }
+    -- end
   },
   {
     'rose-pine/neovim',
     as = 'rose-pine',
-    -- config = function()
-    --   vim.cmd('colorscheme rose-pine-moon')
-    -- end
+    config = function()
+      require("rose-pine").setup({
+        variant = "main",
+        disable_background = true,
+        disable_float_background = true,
+      })
+      vim.cmd('colorscheme rose-pine-moon')
+    end
   }
 
 }
