@@ -9,7 +9,11 @@ return {
     require("go").setup({
       tag_options = '',
     })
-    vim.keymap.set("n", "rr", ":GoTestFunc -v -F -n 1<cr>")
+    -- local opts = { noremap = true, silent = true }
+    vim.keymap.set("n", "tr", ":GoTestFunc -v -F -n 1<CR>")
+    vim.keymap.set("n", "tf", ":GoTestFile -v -F -n 1<CR>")
+    vim.keymap.set("n", "tg", ":GoTestPkg<CR>")
+    vim.keymap.set("n", "ta", ":GoTest<CR>")
   end,
   ft = { "go", 'gomod' },
 }

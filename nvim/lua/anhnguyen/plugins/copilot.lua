@@ -19,5 +19,10 @@ return {
         },
       },
     })
+    -- Disable copilot completely
+    vim.keymap.set("n", "<leader>cpd", ":Copilot disable<cr>", { silent = true, noremap = true })
+
+    -- Enable copilot completely
+    vim.keymap.set("n", "<leader>cpe", ":Copilot enable<cr>", { silent = true, noremap = true })
   end,
 }

@@ -58,7 +58,7 @@ return {
             capabilities = capabilities,
             settings = {
               gopls = {
-                gofumpt = true,
+                gofumpt = false,
                 -- usePlaceholders = true,
                 completeUnimported = true,
                 -- experimentalPostfixCompletions = true,
@@ -80,6 +80,9 @@ return {
           })
         end,
         ["rust_analyzer"] = function()
+          return true
+        end,
+        ["hls"] = function()
           return true
         end,
         ["lua_ls"] = function()

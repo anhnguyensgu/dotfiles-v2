@@ -10,40 +10,41 @@ local spec = {
   { "Mofiqul/vscode.nvim",   lazy = false },
   { "rebelot/kanagawa.nvim", lazy = false },
   { "catppuccin/nvim",       lazy = false },
+  { "Mofiqul/dracula.nvim",  lazy = false },
   {
     "folke/tokyonight.nvim",
     opts = {
       style = "night",
-      -- transparent = true,
-      -- styles = {
-      --   sidebars = "transparent",
-      --   floats = "transparent",
-      -- }
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      }
     },
-    -- config = function(_, opts)
-    --   require('tokyonight').setup(opts)
-    --   vim.cmd('colorscheme tokyonight-moon')
-    --   -- require("tokyonight").setup {
-    --   --   transparent = true,
-    --   --   styles = {
-    --   --     sidebars = "transparent",
-    --   --     floats = "transparent",
-    --   --   }
-    --   -- }
-    -- end
-  },
-  {
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      require("rose-pine").setup({
-        variant = "main",
-        disable_background = true,
-        disable_float_background = true,
-      })
-      vim.cmd('colorscheme rose-pine-moon')
+    config = function(_, opts)
+      require('tokyonight').setup(opts)
+      vim.cmd('colorscheme tokyonight-moon')
+      -- require("tokyonight").setup {
+      --   transparent = true,
+      --   styles = {
+      --     sidebars = "transparent",
+      --     floats = "transparent",
+      --   }
+      -- }
     end
-  }
+  },
+  -- {
+  --   'rose-pine/neovim',
+  --   as = 'rose-pine',
+  --   config = function()
+  --     require("rose-pine").setup({
+  --       variant = "main",
+  --       disable_background = true,
+  --       disable_float_background = true,
+  --     })
+  --     vim.cmd('colorscheme rose-pine-moon')
+  --   end
+  -- }
 
 }
 -- vim.cmd('colorscheme rose-pine-moon')
